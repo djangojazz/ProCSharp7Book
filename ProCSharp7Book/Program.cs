@@ -10,6 +10,7 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
