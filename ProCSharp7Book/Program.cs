@@ -10,9 +10,7 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
-            new Chapter4().FunWithEnums();
-
-            Console.ReadLine();
+            Chapter5.ExampleRunner.RunACar();
         }
     }
         

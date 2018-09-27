@@ -45,6 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chapter4.cs" />
+    <Compile Include="Chapter5\Car.cs" />
+    <Compile Include="Chapter5\ExampleRunner.cs" />
+    <Compile Include="Chapter5\Motorcycle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
