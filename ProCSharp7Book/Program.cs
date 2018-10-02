@@ -10,7 +10,9 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
-            Chapter5.ExampleRunner.StaticClassExample();
+            Chapter5.ExampleRunner.Employees();
+
+            Console.ReadLine();
         }
     }
         
