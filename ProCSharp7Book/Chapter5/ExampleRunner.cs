@@ -12,26 +12,41 @@ namespace ProCSharp7Book.Chapter5
         {
             Console.WriteLine("******* Fun with Class Types *********\n");
             
-            Car chuck = new Car();
-            chuck.PrintState();
+            Car c = new Car();
+            c.PetName = "Chuck";
+            c.Speed = 55;
+            c.Color = "Red";
 
-            Car mary = new Car("Mary");
-            mary.PrintState();
-
-            Car daisy = new Car("Daisy", 75);
-            daisy.PrintState();
-
+            c.DisplayStats();
             Action<Motorcycle> print = x => Console.WriteLine($"Name {x.driverName}, Intensity {x.driverIntensity}");
 
             //Make a motorcycle
-            Motorcycle c = new Motorcycle();
-            print(c);
+            Motorcycle cyc = new Motorcycle();
+            print(cyc);
             Motorcycle c2 = new Motorcycle(name: "Tiny");
             print(c2);
             Motorcycle c3 = new Motorcycle(7);
             print(c3);
 
             Console.ReadLine();
+        }
+
+        public static void HaveAGarage()
+        {
+            Console.WriteLine("******* Fun with automatic properties ******\n");
+
+            //Make a car.
+            Car c = new Car();
+            c.PetName = "Frank";
+            c.Speed = 55;
+            c.Color = "Red";
+            c.DisplayStats();
+
+            //Put car in the garage.
+            Garage g = new Garage();
+            g.MyAuto = c;
+            Console.WriteLine("Number of Cars in garage: {0}", g.NumberOfCars);
+            Console.WriteLine("Your car is named: {0}", g.MyAuto.PetName);
         }
 
         public static void StaticExamples()
@@ -68,13 +83,10 @@ namespace ProCSharp7Book.Chapter5
             Employee emp = new Employee("Marvin", 456, 30_000);
             emp.GiveBonus(1000);
             emp.DisplayStats();
-            
-            //Use the get/set methods to interact with the object's name.
-            emp.SetName("Marv");
-            Console.WriteLine($"Employee is named: {emp.GetName()}");
 
-            Employee emp2 = new Employee();
-            emp2.SetName("Xena The Warrior Princess");
+            //Use the get/set methods to interact with the object's name.
+            emp.Name = "Marv";
+            Console.WriteLine($"Employee is named: {emp.Name}");
         }
     }
 }

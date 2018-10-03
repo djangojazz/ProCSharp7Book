@@ -48,6 +48,7 @@
     <Compile Include="Chapter5\Car.cs" />
     <Compile Include="Chapter5\Employee.cs" />
     <Compile Include="Chapter5\ExampleRunner.cs" />
+    <Compile Include="Chapter5\Garage.cs" />
     <Compile Include="Chapter5\Motorcycle.cs" />
     <Compile Include="Chapter5\SavingsAccount.cs" />
     <Compile Include="Chapter5\TimeUtilClass.cs" />

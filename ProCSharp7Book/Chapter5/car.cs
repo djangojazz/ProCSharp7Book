@@ -8,26 +8,17 @@ namespace ProCSharp7Book.Chapter5
 {
     class Car
     {
-        //The 'state' of the car
-        public string petName;
-        public int currSpeed;
+        //Automatic properties
+        public string PetName { get; set; }
+        public int Speed { get; set; }
+        public string Color { get; set; }
 
-        //a custom default constructor
-        public Car()
+
+        public void DisplayStats()
         {
-            petName = "Chuck";
-            currSpeed = 10;
+            Console.WriteLine("Car Name: {0}", PetName);
+            Console.WriteLine("Speed: {0}", Speed);
+            Console.WriteLine("Color: {0}", Color);
         }
-
-        //Here, currSpeed will receive the default value of an int (zero).
-        public Car(string pn) => petName = pn;
-
-        //Let the caller set the full state of the Car.
-        public Car(string pn, int cs) => (petName, currSpeed) = (pn, cs);
-
-        //The functionality of the car.
-        //Using the expression-bodied member syntax introduced in C#6
-        public void PrintState() => Console.WriteLine($"{petName} is going {currSpeed}.");
-        public void SpeedUp(int delta) => currSpeed += delta;
     }
 }

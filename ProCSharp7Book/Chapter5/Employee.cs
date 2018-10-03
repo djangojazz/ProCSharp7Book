@@ -12,31 +12,53 @@ namespace ProCSharp7Book.Chapter5
         private string empName;
         private int empId;
         private float currPay;
+        private int empAge;
 
         //Constructors
         public Employee() { }
-        public Employee(string name, int id, float pay)
+        public Employee(string name, int id, float pay) : this(name, 0, id, pay) { }
+        public Employee(string name, int age, int id, float pay)
         {
             empName = name;
             empId = id;
+            empAge = age;
             currPay = pay;
         }
 
-        //Accessor (get method).
-        public string GetName()
+        //Properties
+        public string Name
         {
-            return empName;
+            get { return empName; }
+            set
+            {
+                if (value.Length > 15)
+                    Console.WriteLine("Error! Name length exceeds 15 characters");
+                else
+                    empName = value;
+            }
         }
 
-        //Mutator (set method)
-        public void SetName(string name)
+        public int Age
         {
-            //Do a check for incoming value before making assignment.
-            if (name.Length > 15)
-                Console.WriteLine("Error! Name length exceeds 15 characters");
-            else
-                empName = name;
+          get => empAge; 
+          set => empAge = value; 
         }
+
+        //Accessor (get method).
+        //public string GetName()
+        //{
+        //    return empName;
+        //}
+
+        ////Mutator (set method)
+        //public void SetName(string name)
+        //{
+        //    //Do a check for incoming value before making assignment.
+        //    if (name.Length > 15)
+        //        Console.WriteLine("Error! Name length exceeds 15 characters");
+        //    else
+        //        empName = name;
+        //}
 
         //Methods.
         public void GiveBonus(float amount)
@@ -48,6 +70,7 @@ namespace ProCSharp7Book.Chapter5
         {
             Console.WriteLine("Name: {0}", empName);
             Console.WriteLine("ID: {0}", empId);
+            Console.WriteLine("Age: {0}", empAge);
             Console.WriteLine("Pay: {0}", currPay);
         }
     }
