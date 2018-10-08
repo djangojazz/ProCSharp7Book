@@ -52,6 +52,9 @@
     <Compile Include="Chapter5\Motorcycle.cs" />
     <Compile Include="Chapter5\SavingsAccount.cs" />
     <Compile Include="Chapter5\TimeUtilClass.cs" />
+    <Compile Include="Chapter6\Car.cs" />
+    <Compile Include="Chapter6\Chapter6Runner.cs" />
+    <Compile Include="Chapter6\MiniVan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

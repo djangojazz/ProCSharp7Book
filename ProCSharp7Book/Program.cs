@@ -10,7 +10,7 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
-            Chapter5.ExampleRunner.HaveAGarage();
+            Chapter6.Chapter6Runner.RunMiniVanExample();
 
             Console.ReadLine();
         }
