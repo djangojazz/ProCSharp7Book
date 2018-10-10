@@ -54,12 +54,17 @@
     <Compile Include="Chapter5\TimeUtilClass.cs" />
     <Compile Include="Chapter6\Car.cs" />
     <Compile Include="Chapter6\Chapter6Runner.cs" />
+    <Compile Include="Chapter6\Employee.cs" />
+    <Compile Include="Chapter6\Manager.cs" />
     <Compile Include="Chapter6\MiniVan.cs" />
+    <Compile Include="Chapter6\PTSalesPerson.cs" />
+    <Compile Include="Chapter6\SalesPerson.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Chapter6\Cars.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

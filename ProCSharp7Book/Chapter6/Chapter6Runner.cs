@@ -29,5 +29,14 @@ namespace ProCSharp7Book.Chapter6
             van.Speed = 10;
             Console.WriteLine($"Van is going {van.Speed}");
         }
+
+        internal static void EmployeeClassHeirarchy()
+        {
+            Console.WriteLine("****** Employee Class Heirarchy ********\n");
+            SalesPerson fred = new SalesPerson();
+            fred.Age = 31;
+            fred.Name = "Fred";
+            fred.SalesNumber = 50;
+        }
     }
 }
