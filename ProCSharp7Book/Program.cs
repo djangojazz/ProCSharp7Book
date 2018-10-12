@@ -10,7 +10,7 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
-            Chapter6.Chapter6Runner.EmployeeClassHeirarchy();
+            Chapter6.Chapter6Runner.EmployeeOverridingExamples();
 
             Console.ReadLine();
         }

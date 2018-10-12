@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProCSharp7Book.Chapter6
 {
-    class Employee
+    partial class Employee
     {
         //Field data.
         private string empName;
@@ -16,7 +16,7 @@ namespace ProCSharp7Book.Chapter6
 
         //Constructors
         public Employee() { }
-        public Employee(string name, int id, float pay) : this(name, 0, id, pay, 0) { }
+        public Employee(string name, int id, float pay) : this(name, 0, id, pay, String.Empty) { }
         public Employee(string name, int age, int id, float pay, string ssn)
         {
             empName = name;
@@ -64,17 +64,18 @@ namespace ProCSharp7Book.Chapter6
         //}
 
         //Methods.
-        public void GiveBonus(float amount)
+        public virtual void GiveBonus(float amount)
         {
             currPay += amount;
         }
 
-        public void DisplayStats()
+        public virtual void DisplayStats()
         {
             Console.WriteLine("Name: {0}", empName);
             Console.WriteLine("ID: {0}", empId);
             Console.WriteLine("Age: {0}", empAge);
             Console.WriteLine("Pay: {0}", currPay);
+            Console.WriteLine("SSN: {0}", SSN);
         }
     }
 }

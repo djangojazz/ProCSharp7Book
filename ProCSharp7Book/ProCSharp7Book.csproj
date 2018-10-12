@@ -52,9 +52,11 @@
     <Compile Include="Chapter5\Motorcycle.cs" />
     <Compile Include="Chapter5\SavingsAccount.cs" />
     <Compile Include="Chapter5\TimeUtilClass.cs" />
+    <Compile Include="Chapter6\BenefitPackage.cs" />
     <Compile Include="Chapter6\Car.cs" />
     <Compile Include="Chapter6\Chapter6Runner.cs" />
     <Compile Include="Chapter6\Employee.cs" />
+    <Compile Include="Chapter6\Employee2.cs" />
     <Compile Include="Chapter6\Manager.cs" />
     <Compile Include="Chapter6\MiniVan.cs" />
     <Compile Include="Chapter6\PTSalesPerson.cs" />
