@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProCSharp7Book.Chapter6.Employee">
+    <Position X="8.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAAAAAAAAAAAAAAIEAIAEQQEAAAAAAAAAAAAQAAAQA=</HashCode>
+      <FileName>Chapter6\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProCSharp7Book.Chapter6.Manager" Collapsed="true">
+    <Position X="6.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Chapter6\Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProCSharp7Book.Chapter6.PTSalesPerson" Collapsed="true">
+    <Position X="14.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Chapter6\PTSalesPerson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProCSharp7Book.Chapter6.SalesPerson" Collapsed="true">
+    <Position X="14.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAQA=</HashCode>
+      <FileName>Chapter6\SalesPerson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

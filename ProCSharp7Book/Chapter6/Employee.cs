@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProCSharp7Book.Chapter6
 {
-    partial class Employee
+    abstract partial class Employee
     {
         //Field data.
         private string empName;

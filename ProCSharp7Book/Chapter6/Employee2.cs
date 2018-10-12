@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProCSharp7Book.Chapter6
 {
-    partial class Employee
+    abstract partial class Employee
     {
         //Contain a BenefitPackage object.
         protected BenefitPackage emptBenefits = new BenefitPackage();
