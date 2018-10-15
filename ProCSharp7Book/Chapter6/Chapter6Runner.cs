@@ -52,5 +52,107 @@ namespace ProCSharp7Book.Chapter6
             fran.GiveBonus(200);
             fran.DisplayStats();
         }
+
+        internal static void Shapes()
+        {
+            Console.WriteLine("**** Fun with Polymorphism ******\n");
+            var hex = new Hexagon("Beth");
+            hex.Draw();
+
+            var cir = new Circle("Cindy");
+            cir.Draw();
+        }
+
+        internal static void ShapeArrays()
+        {
+            Console.WriteLine("**** Fun with Polymorphism ******\n");
+            Shape[] myShapes = { new Hexagon(), new Circle(), new Hexagon("Mick"), new Circle("Beth"), new Hexagon("Linda") };
+
+            myShapes.ToList().ForEach(x => x.Draw());
+        }
+
+        internal static void ThreeDCircle()
+        {
+            ShapeArrays();
+            var o = new ThreeDCircle();
+            //shadow methods
+            o.Draw();
+
+            //This calls the Draw() method of the parent!
+            ((Circle)o).Draw();
+        }
+
+        internal static void Objects()
+        {
+            Console.WriteLine("**** Fun with System.Object ********\n");
+            var p1 = new Person();
+
+            Console.WriteLine($"ToString: {p1.ToString()}");
+            Console.WriteLine($"HashCode: {p1.GetHashCode()}");
+            Console.WriteLine($"Type: {p1.GetType()}");
+
+            Person p2 = p1;
+            object o = p2;
+            if(o.Equals(p1) && p2.Equals(o))
+            {
+                Console.WriteLine("Same Instance!");
+            }
+        }
+
+        internal static void PersonTesting()
+        {
+            Console.WriteLine("**** Fun with System.Object ****\n");
+
+            Person p1 = new Person("Homer", "Simpson", 50);
+            Person p2 = new Person("Homer", "Simpson", 50);
+
+            Console.WriteLine($"p1.ToString() = {p1.ToString()}");
+            Console.WriteLine($"p2.ToString() = {p2.ToString()}");
+            Console.WriteLine($"p1 = p2?: {p1.Equals(p2)}");
+            Console.WriteLine($"Same hash codes?: {p1.GetHashCode() == p2.GetHashCode()}");
+
+            p2.Age = 45;
+            Console.WriteLine($"p1.ToString() = {p1.ToString()}");
+            Console.WriteLine($"p2.ToString() = {p2.ToString()}");
+            Console.WriteLine($"p1 = p2?: {p1.Equals(p2)}");
+            Console.WriteLine($"Same hash codes?: {p1.GetHashCode() == p2.GetHashCode()}");
+
+            //Static members of the System.Object
+            Person p3 = new Person("Sally", "Jones", 4);
+            Person p4 = new Person("Sally", "Jones", 4);
+            Console.WriteLine($"P3 and P4 have same state: {object.Equals(p3, p4)}");
+            Console.WriteLine($"P3 and P4 are pointing to the same object: {object.ReferenceEquals(p3, p4)}");
+        }
+
+        static void GivePromotion(Employee emp)
+        {
+            Console.WriteLine($"{emp.Name} was promoted!");
+            //Pattern matching:
+            switch(emp)
+            {
+                case SalesPerson s when s.SalesNumber > 5:
+                    Console.WriteLine($"{emp.Name} made {s.SalesNumber} sale(s)");
+                    break;
+                case Manager m:
+                    Console.WriteLine($"{emp.Name} had {m.StockOptions} stock options)");
+                    break;
+                case Intern _:
+                    break;
+                case null:
+                    break;
+            }
+
+            //if(emp is SalesPerson s)
+            //{
+            //    //old
+            //    //Console.WriteLine($"{emp.Name} made {((SalesPerson)emp).SalesNumber} sale(s)");
+            //    //new in c7 uses the alias of 's' if cast succeeded.
+            //    Console.WriteLine($"{emp.Name} made {s.SalesNumber} sale(s)");
+            //}
+            //if (emp is Manager m)
+            //{
+            //    Console.WriteLine($"{emp.Name} had {m.StockOptions} stock options)");
+            //}
+        }
     }
 }

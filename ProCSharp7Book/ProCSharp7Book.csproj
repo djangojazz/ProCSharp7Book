@@ -52,22 +52,28 @@
     <Compile Include="Chapter5\Motorcycle.cs" />
     <Compile Include="Chapter5\SavingsAccount.cs" />
     <Compile Include="Chapter5\TimeUtilClass.cs" />
-    <Compile Include="Chapter6\BenefitPackage.cs" />
-    <Compile Include="Chapter6\Car.cs" />
+    <Compile Include="Chapter6\Employees\BenefitPackage.cs" />
+    <Compile Include="Chapter6\Cars\Car.cs" />
     <Compile Include="Chapter6\Chapter6Runner.cs" />
-    <Compile Include="Chapter6\Employee.cs" />
-    <Compile Include="Chapter6\Employee2.cs" />
-    <Compile Include="Chapter6\Manager.cs" />
-    <Compile Include="Chapter6\MiniVan.cs" />
-    <Compile Include="Chapter6\PTSalesPerson.cs" />
-    <Compile Include="Chapter6\SalesPerson.cs" />
+    <Compile Include="Chapter6\Employees\Employee.cs" />
+    <Compile Include="Chapter6\Employees\Employee2.cs" />
+    <Compile Include="Chapter6\Employees\Intern.cs" />
+    <Compile Include="Chapter6\Employees\Manager.cs" />
+    <Compile Include="Chapter6\Cars\MiniVan.cs" />
+    <Compile Include="Chapter6\Employees\PTSalesPerson.cs" />
+    <Compile Include="Chapter6\Employees\SalesPerson.cs" />
+    <Compile Include="Chapter6\Person.cs" />
+    <Compile Include="Chapter6\Shapes\Circle.cs" />
+    <Compile Include="Chapter6\Shapes\Hexagon.cs" />
+    <Compile Include="Chapter6\Shapes\Shape.cs" />
+    <Compile Include="Chapter6\Shapes\ThreeDCircle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Chapter6\Cars.cd" />
-    <None Include="Chapter6\Employees.cd" />
+    <None Include="Chapter6\Cars\Cars.cd" />
+    <None Include="Chapter6\Employees\Employees.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
