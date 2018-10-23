@@ -10,7 +10,7 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
-            Chapter6.Chapter6Runner.PersonTesting();
+            Chapter7.Chapter7Runner.CarExceptionHandling();
 
             Console.ReadLine();
         }
