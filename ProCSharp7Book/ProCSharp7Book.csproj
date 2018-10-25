@@ -68,6 +68,7 @@
     <Compile Include="Chapter6\Shapes\Shape.cs" />
     <Compile Include="Chapter6\Shapes\ThreeDCircle.cs" />
     <Compile Include="Chapter7\Car.cs" />
+    <Compile Include="Chapter7\CarIsDeadException.cs" />
     <Compile Include="Chapter7\Chapter7Runner.cs" />
     <Compile Include="Chapter7\Radio.cs" />
     <Compile Include="Program.cs" />

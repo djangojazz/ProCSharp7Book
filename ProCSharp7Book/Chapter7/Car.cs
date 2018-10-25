@@ -31,6 +31,9 @@ namespace ProCSharp7Book.Chapter7
 
         public void Accelerate(int delta)
         {
+            if (delta < 0)
+                throw new ArgumentOutOfRangeException("delta", "Speed must be greater than zero!");
+
             if(carIsDead)
                 Console.WriteLine($"{PetName} is out of order...");
             else
@@ -41,7 +44,17 @@ namespace ProCSharp7Book.Chapter7
                     CurrentSpeed = 0;
                     carIsDead = true;
 
-                    throw new Exception($"{PetName} has overheated!");
+                    CarIsDeadException ex = new CarIsDeadException($"{PetName} has overheated!", "You have a lead foot", DateTime.Now);
+                    ex.HelpLink = "http://www.CarsRUs.com";
+                    
+                    throw ex;
+
+                    //Exception ex = new Exception($"{PetName} has overheated!");
+                    //ex.HelpLink = "http://www.CarsRUs.com";
+
+                    //ex.Data.Add("TimeStamp", $"The car exploded at {DateTime.Now}");
+                    //ex.Data.Add("Cause", "You have a lead foot");
+                    //throw ex;
                 }
                 else
                     Console.WriteLine($"-> Current speed is {CurrentSpeed}");
