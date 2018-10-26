@@ -71,6 +71,11 @@
     <Compile Include="Chapter7\CarIsDeadException.cs" />
     <Compile Include="Chapter7\Chapter7Runner.cs" />
     <Compile Include="Chapter7\Radio.cs" />
+    <Compile Include="Chapter8\Chapter8Runner.cs" />
+    <Compile Include="Chapter8\IDrawToPrinter.cs" />
+    <Compile Include="Chapter8\IDrawToMemory.cs" />
+    <Compile Include="Chapter8\IDrawToForm.cs" />
+    <Compile Include="Chapter8\Octagon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

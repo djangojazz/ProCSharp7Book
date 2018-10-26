@@ -10,7 +10,7 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
-            Chapter7.Chapter7Runner.CarHandlingMultipleExceptions();
+            Chapter8.Chapter8Runner.InterfaceClashes();
 
             Console.ReadLine();
         }
