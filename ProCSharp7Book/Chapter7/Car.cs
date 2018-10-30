@@ -10,7 +10,7 @@ namespace ProCSharp7Book.Chapter7
     {
         public const int MaxSpeed = 100;
         
-        private int CurrentSpeed { get; set; } = 0;
+        public int CurrentSpeed { get; set; } = 0;
         public string PetName { get; set; } = "";
 
         private bool carIsDead;

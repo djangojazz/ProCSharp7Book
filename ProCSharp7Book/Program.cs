@@ -10,7 +10,7 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
-            Chapter8.Chapter8Runner.InterfaceClashes();
+            Chapter8.Chapter8Runner.YieldKeyword();
 
             Console.ReadLine();
         }
