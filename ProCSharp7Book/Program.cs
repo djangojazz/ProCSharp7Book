@@ -10,7 +10,7 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
-            Chapter8.Chapter8Runner.YieldKeyword();
+            Chapter8.Chapter8Runner.FunWithObjectSorting();
 
             Console.ReadLine();
         }

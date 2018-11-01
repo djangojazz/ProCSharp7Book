@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,6 +73,8 @@
     <Compile Include="Chapter7\Chapter7Runner.cs" />
     <Compile Include="Chapter7\Radio.cs" />
     <Compile Include="Chapter8\BitmapImage.cs" />
+    <Compile Include="Chapter8\Car.cs" />
+    <Compile Include="Chapter8\CarIsDeadException.cs" />
     <Compile Include="Chapter8\Chapter8Runner.cs" />
     <Compile Include="Chapter8\Garage.cs" />
     <Compile Include="Chapter8\IAdvancedDraw.cs" />
@@ -80,6 +83,10 @@
     <Compile Include="Chapter8\IDrawToMemory.cs" />
     <Compile Include="Chapter8\IDrawToForm.cs" />
     <Compile Include="Chapter8\Octagon.cs" />
+    <Compile Include="Chapter8\PetNameComparer.cs" />
+    <Compile Include="Chapter8\Point.cs" />
+    <Compile Include="Chapter8\PointDescription.cs" />
+    <Compile Include="Chapter8\Radio.cs" />
     <Compile Include="Chapter8\Rectangle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
