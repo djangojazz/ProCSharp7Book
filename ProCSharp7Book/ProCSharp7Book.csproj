@@ -88,6 +88,12 @@
     <Compile Include="Chapter8\PointDescription.cs" />
     <Compile Include="Chapter8\Radio.cs" />
     <Compile Include="Chapter8\Rectangle.cs" />
+    <Compile Include="Chapter9\Car.cs" />
+    <Compile Include="Chapter9\CarCollection.cs" />
+    <Compile Include="Chapter9\Chapter9Runner.cs" />
+    <Compile Include="Chapter9\IntCollection.cs" />
+    <Compile Include="Chapter9\Person.cs" />
+    <Compile Include="Chapter9\PersonCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
