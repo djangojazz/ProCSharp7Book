@@ -10,7 +10,7 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
-            Chapter9.Chapter9Runner.GenericList();
+            Chapter9.Chapter9Runner.GenericQueue();
 
             Console.ReadLine();
         }
