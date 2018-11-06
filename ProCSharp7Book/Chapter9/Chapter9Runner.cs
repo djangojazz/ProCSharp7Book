@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -69,9 +71,6 @@ namespace ProCSharp7Book.Chapter9
         {
             Console.WriteLine("***** Custom Person Collection ******");
             Stack<Person> stackOfPeople = new Stack<Person>();
-            stackOfPeople.Push(new Person("Homer", "Simpson", 40));
-            stackOfPeople.Push(new Person("Marge", "Simpson", 38));
-            stackOfPeople.Push(new Person("Lisa", "Simpson", 9));
 
             // Now look at the top item, pop it, and look again.
             Console.WriteLine($"First Person is {stackOfPeople.Peek()}");
@@ -123,6 +122,77 @@ namespace ProCSharp7Book.Chapter9
                 Console.WriteLine($"\nError! {ex.Message}");
             }
         }
+
+        internal static void StoredPeople()
+        {
+            Console.WriteLine("***** Sorted PersonSet ******");
+
+            SortedSet<Person> setOfPeople = new SortedSet<Person>(new SortPeopleByAge())
+            {
+                new Person("Homer", "Simpson", 40),
+                new Person("Marge", "Simpson", 38),
+                new Person("Lisa", "Simpson", 9),
+                new Person("Bart", "Simpson", 7)
+            };
+
+            foreach (Person p in setOfPeople)
+                Console.WriteLine(p);
+
+            Console.WriteLine();
+
+            setOfPeople.Add(new Person("Saku", "Jones", 1));
+            setOfPeople.Add(new Person("Mikko", "Jones", 32));
+
+            foreach (Person p in setOfPeople)
+                Console.WriteLine(p);
+        }
+
+        internal static void WorkingWithObservableCollection()
+        {
+            //Make a collection to observe and add a few people.
+            ObservableCollection<Person> people = new ObservableCollection<Person>()
+            {
+                new Person("Peter", "Murphy", 52),
+                new Person("Kevin", "Key", 48)
+            };
+
+            //Wire up the collection changed argument event.
+            people.CollectionChanged += people_CollectionChanged;
+
+            //Make some changes
+            people.Remove(people.Last());
+            people.Add(new Person("Brett", "Me", 40));
+            people.Last().LastName = "Morin";
+
+        }
         
+
+        private static void people_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            //What was the action that caused the event?
+            Console.WriteLine($"Action for this event: {e.Action}"); ;
+
+            //They removed something.
+            if(e.Action == NotifyCollectionChangedAction.Remove)
+            {
+                Console.WriteLine("Here are OLD items:");
+                foreach (Person p in e.OldItems)
+                {
+                    Console.WriteLine(p.ToString());
+                }
+                Console.WriteLine();
+            }
+
+            //They added something.
+            if(e.Action == NotifyCollectionChangedAction.Add)
+            {
+                //Now show the NEW items that were inserted.
+                Console.WriteLine("Here are the NEW items:");
+                foreach (Person p in e.NewItems)
+                {
+                    Console.WriteLine(p.ToString());
+                }
+            }
+        }
     }
 }

@@ -94,6 +94,7 @@
     <Compile Include="Chapter9\IntCollection.cs" />
     <Compile Include="Chapter9\Person.cs" />
     <Compile Include="Chapter9\PersonCollection.cs" />
+    <Compile Include="Chapter9\SortPeopleByAge.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
