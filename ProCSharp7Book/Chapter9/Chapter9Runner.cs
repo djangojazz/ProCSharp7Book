@@ -166,6 +166,24 @@ namespace ProCSharp7Book.Chapter9
 
         }
         
+        internal static void FunWithGenericSwap()
+        {
+            Console.WriteLine("****** Fun with Custom Generic Methods ******\n");
+
+            //Swap 2 ints.
+            int a = 10, b = 90;
+            Console.WriteLine($"Before the swap: {a}, {b}");
+            Swap<int>(ref a, ref b);
+            Console.WriteLine($"After the swap: {a}, {b}");
+            Console.WriteLine();
+
+            //Swap 2 string.
+            string s1 = "Hello", s2 = "There";
+            Console.WriteLine($"Before the swap: {s1}, {s2}");
+            Swap<string>(ref s1, ref s2);
+            Console.WriteLine($"After the swap: {s1}, {s2}");
+            Console.WriteLine();
+        }
 
         private static void people_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
@@ -193,6 +211,14 @@ namespace ProCSharp7Book.Chapter9
                     Console.WriteLine(p.ToString());
                 }
             }
+        }
+        
+        static void Swap<T>(ref T a, ref T b)
+        {
+            Console.WriteLine($"You sent the swap() method a {typeof(T)}");
+            T temp = a;
+            a = b;
+            b = temp;
         }
     }
 }
