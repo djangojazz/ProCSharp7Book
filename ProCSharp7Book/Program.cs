@@ -10,7 +10,7 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
-            Chapter9.Chapter9Runner.FunWithGenericSwap();
+            Chapter10.Runner.CarRunner();
 
             Console.ReadLine();
         }

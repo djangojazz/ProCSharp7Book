@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chapter10\Car.cs" />
+    <Compile Include="Chapter10\Chapter10Runner.cs" />
+    <Compile Include="Chapter10\SimpleMath.cs" />
     <Compile Include="Chapter4.cs" />
     <Compile Include="Chapter5\Car.cs" />
     <Compile Include="Chapter5\Employee.cs" />
