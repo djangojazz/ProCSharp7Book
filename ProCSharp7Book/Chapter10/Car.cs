@@ -22,41 +22,70 @@ namespace ProCSharp7Book.Chapter10
             MaxSpeed = maxSp;
             PetName = name;
         }
+        
+        public delegate void CarEngineHandler(object sender, CarEventArgs e);
+        //public delegate void CarEngineHandler(string msgForCaller);
 
-        //1. Define a delegate type
-        public delegate void CarEngineHandler(string msgForCaller);
+        //This car can send these events.
+        public event EventHandler<CarEventArgs> Exploded;
+        public event EventHandler<CarEventArgs> AboutToBlow;
 
-        //2. Define a member variable of this delegate.
-        private CarEngineHandler listOfHandlers;
-
-        //3. Add Registration function for the caller.
+        public CarEngineHandler listOfHandlers;
+        
         public void RegisterWithCarEngineHandler(CarEngineHandler methodToCall)
         {
-            listOfHandlers = methodToCall;
+            listOfHandlers += methodToCall;
         }
 
-        //4. Implement the Accelerate() method to invoke the delegate's invocation list under the correct circumstances.
+        public void UnRegisterWithCarEngineHandler(CarEngineHandler methodToCall)
+        {
+            listOfHandlers -= methodToCall;
+        }
+        
         public void Accelerate(int delta)
         {
-            //If this car is "dead", send dead message.
+            //If the car is dead, fire exploded event.
             if(carIsDead)
             {
-                listOfHandlers?.Invoke("Sorry, this car is dead....");
+                Exploded?.Invoke(this, new CarEventArgs("Sorry, this car is dead..."));
             }
             else
             {
                 CurrentSpeed += delta;
 
-                //Is the car "almost dead"?
-                if(10 == (MaxSpeed - CurrentSpeed) && listOfHandlers != null)
-                {
-                    listOfHandlers("Careful buddy! Gonna blow!");
-                }
+                //Almost dead?
+                if (10 == MaxSpeed - CurrentSpeed && AboutToBlow != null)
+                    AboutToBlow(this, new CarEventArgs("Careful buddy! Gonna blow!"));
+
+                //Still OK
                 if (CurrentSpeed >= MaxSpeed)
                     carIsDead = true;
                 else
-                    Console.WriteLine($"CurrentSpeed = {CurrentSpeed}");
+                    Console.WriteLine($"Current Speed = {CurrentSpeed}");
             }
+
+            //if (listOfHandlers != null)
+            //    listOfHandlers("Sorry, this car is dead...");
+
+            ////If this car is "dead", send dead message.
+            //if(carIsDead)
+            //{
+            //    listOfHandlers?.Invoke("Sorry, this car is dead....");
+            //}
+            //else
+            //{
+            //    CurrentSpeed += delta;
+
+            //    //Is the car "almost dead"?
+            //    if(10 == (MaxSpeed - CurrentSpeed) && listOfHandlers != null)
+            //    {
+            //        listOfHandlers("Careful buddy! Gonna blow!");
+            //    }
+            //    if (CurrentSpeed >= MaxSpeed)
+            //        carIsDead = true;
+            //    else
+            //        Console.WriteLine($"CurrentSpeed = {CurrentSpeed}");
+            //}
         }
     }
 }

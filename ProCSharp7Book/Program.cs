@@ -10,7 +10,7 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
-            Chapter10.Runner.CarRunner();
+            Chapter10.Runner.LambdaSubscribing();
 
             Console.ReadLine();
         }
