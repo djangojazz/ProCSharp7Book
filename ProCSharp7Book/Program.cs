@@ -10,8 +10,7 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
-            Chapter10.Runner.LambdaSubscribing();
-
+            Chapter11.Runner.FunWithAnnonymousTypes();
             Console.ReadLine();
         }
     }

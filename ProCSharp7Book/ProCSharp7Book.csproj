@@ -49,6 +49,7 @@
     <Compile Include="Chapter10\CarEventArgs.cs" />
     <Compile Include="Chapter10\Chapter10Runner.cs" />
     <Compile Include="Chapter10\SimpleMath.cs" />
+    <Compile Include="Chapter11\Chapter11Runner.cs" />
     <Compile Include="Chapter4.cs" />
     <Compile Include="Chapter5\Car.cs" />
     <Compile Include="Chapter5\Employee.cs" />
@@ -107,5 +108,6 @@
     <None Include="Chapter6\Cars\Cars.cd" />
     <None Include="Chapter6\Employees\Employees.cd" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
