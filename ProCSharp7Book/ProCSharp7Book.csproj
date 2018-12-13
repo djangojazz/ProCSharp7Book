@@ -50,6 +50,8 @@
     <Compile Include="Chapter10\Chapter10Runner.cs" />
     <Compile Include="Chapter10\SimpleMath.cs" />
     <Compile Include="Chapter11\Chapter11Runner.cs" />
+    <Compile Include="Chapter12\Car.cs" />
+    <Compile Include="Chapter12\Runner.cs" />
     <Compile Include="Chapter4.cs" />
     <Compile Include="Chapter5\Car.cs" />
     <Compile Include="Chapter5\Employee.cs" />

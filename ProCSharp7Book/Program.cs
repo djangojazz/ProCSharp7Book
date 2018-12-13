@@ -10,7 +10,7 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
-            Chapter11.Runner.FunWithAnnonymousTypes();
+            Chapter12.Runner.FilteringDataUsingTypeOfInt();
             Console.ReadLine();
         }
     }
