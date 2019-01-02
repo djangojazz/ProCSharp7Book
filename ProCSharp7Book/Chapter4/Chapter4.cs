@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProCSharp7Book
+namespace ProCSharp7Book.Chapter4
 {
     internal class Chapter4
     {

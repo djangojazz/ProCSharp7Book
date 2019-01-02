@@ -10,7 +10,7 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
-            Chapter12.Runner.FilteringDataUsingTypeOfInt();
+            Chapter13.Runner.GCBasics();
             Console.ReadLine();
         }
     }

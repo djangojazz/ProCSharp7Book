@@ -52,7 +52,9 @@
     <Compile Include="Chapter11\Chapter11Runner.cs" />
     <Compile Include="Chapter12\Car.cs" />
     <Compile Include="Chapter12\Runner.cs" />
-    <Compile Include="Chapter4.cs" />
+    <Compile Include="Chapter13\Car.cs" />
+    <Compile Include="Chapter13\Runner.cs" />
+    <Compile Include="Chapter4\Chapter4.cs" />
     <Compile Include="Chapter5\Car.cs" />
     <Compile Include="Chapter5\Employee.cs" />
     <Compile Include="Chapter5\ExampleRunner.cs" />
