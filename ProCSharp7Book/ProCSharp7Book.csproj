@@ -54,6 +54,7 @@
     <Compile Include="Chapter12\Runner.cs" />
     <Compile Include="Chapter13\Car.cs" />
     <Compile Include="Chapter13\Runner.cs" />
+    <Compile Include="Chapter14\Runner.cs" />
     <Compile Include="Chapter4\Chapter4.cs" />
     <Compile Include="Chapter5\Car.cs" />
     <Compile Include="Chapter5\Employee.cs" />
@@ -112,6 +113,11 @@
     <None Include="Chapter6\Cars\Cars.cd" />
     <None Include="Chapter6\Employees\Employees.cd" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Chapter14.CarLibrary\Chapter14.CarLibrary.csproj">
+      <Project>{418372AC-FBBD-470D-BA8F-F3D12CD92783}</Project>
+      <Name>Chapter14.CarLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

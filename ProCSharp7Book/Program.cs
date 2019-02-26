@@ -10,7 +10,7 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
-            Chapter13.Runner.GCBasics();
+            Chapter14.Runner.ReferenceCarRunner();
             Console.ReadLine();
         }
     }

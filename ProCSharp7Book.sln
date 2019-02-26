@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProCSharp7Book", "ProCSharp7Book\ProCSharp7Book.csproj", "{4BACBFED-5ADB-4248-BB8C-266BAF9A504C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter14.CarLibrary", "Chapter14.CarLibrary\Chapter14.CarLibrary.csproj", "{418372AC-FBBD-470D-BA8F-F3D12CD92783}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4BACBFED-5ADB-4248-BB8C-266BAF9A504C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BACBFED-5ADB-4248-BB8C-266BAF9A504C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BACBFED-5ADB-4248-BB8C-266BAF9A504C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{418372AC-FBBD-470D-BA8F-F3D12CD92783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{418372AC-FBBD-470D-BA8F-F3D12CD92783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{418372AC-FBBD-470D-BA8F-F3D12CD92783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{418372AC-FBBD-470D-BA8F-F3D12CD92783}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
