@@ -10,7 +10,7 @@ namespace ProCSharp7Book
     {
         static void Main(string[] args)
         {
-            Chapter14.Runner.ReferenceCarRunner();
+            Chapter15.Runner.FindInformationOnTypeConsole();
             Console.ReadLine();
         }
     }
